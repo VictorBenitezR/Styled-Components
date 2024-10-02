@@ -1,9 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client"; // Cambiado a react-dom/client
 import App from "./App";
-import "./assets/estilos.css";
 
-ReactDOM.render(
-    <App />, 
-    document.getElementById("root")
+// Crear el root con createRoot()
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// Usar root.render en lugar de ReactDOM.render
+root.render(
+    <App />
 );
